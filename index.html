@@ -219,8 +219,31 @@
                     <td><strong>Social Media Pro</strong></td>
                     <td>Montaż dynamicznego filmu (30-60 sekund) z muzyką, napisami i efektami przejść.</td>
                     <td class="price">60 PLN</td>
+                    
                 </tr>
             </tbody>
+            <section class="info-section" style="margin-top: 40px; border: 2px solid var(--primary);">
+    <h2>Kalkulator wyceny</h2>
+    <p>Zaznacz usługi, które Cię interesują, aby zobaczyć wstępny koszt:</p>
+    
+    <div style="display: flex; flex-direction: column; gap: 15px;">
+        <label style="font-size: 1.2em; cursor: pointer;">
+            <input type="checkbox" class="price-check" value="15" onchange="calculateTotal()"> 📸 Sesja Photo (15 PLN)
+        </label>
+        <label style="font-size: 1.2em; cursor: pointer;">
+            <input type="checkbox" class="price-check" value="45" onchange="calculateTotal()"> 🛸 Sesja Wideo 2.7K (45 PLN)
+        </label>
+        <label style="font-size: 1.2em; cursor: pointer;">
+            <input type="checkbox" class="price-check" value="60" onchange="calculateTotal()"> 🎬 Full Social Pro - Montaż (60 PLN)
+        </label>
+    </div>
+
+    <div style="margin-top: 30px; padding: 20px; background: rgba(0,0,0,0.4); border-radius: 15px; text-align: center;">
+        <span style="font-size: 1.5em;">Razem do zapłaty: </span>
+        <span id="totalPrice" style="font-size: 2.5em; color: var(--accent); font-weight: 900;">0</span>
+        <span style="font-size: 1.5em; color: var(--accent);"> PLN</span>
+    </div>
+</section>
         </table>
     </div>
 
@@ -248,6 +271,19 @@
 </footer>
 
 </div>
-
+<script>
+    function calculateTotal() {
+        let total = 0;
+        const checkboxes = document.querySelectorAll('.price-check');
+        
+        checkboxes.forEach((checkbox) => {
+            if (checkbox.checked) {
+                total += parseInt(checkbox.value);
+            }
+        });
+        
+        document.getElementById('totalPrice').innerText = total;
+    }
+</script>
 </body>
 </html>
