@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jacek Kosek - Profesjonalne Usługi Dronem 2.7K</title>
@@ -299,7 +300,9 @@
         </label>
     </div>
 
-
+<button onclick="generatePDF()" style="margin-top: 20px; padding: 15px 30px; background-color: #28a745; color: white; border: none; border-radius: 8px; cursor: pointer; font-weight: bold;">
+    Generuj Certyfikat Wykonania Usługi (PDF)
+</button>
     </div>
 </section>
         </table>
@@ -363,6 +366,49 @@
 
     // Wywołujemy funkcję raz na starcie, żeby wyzerować kalkulator po odświeżeniu
     window.onload = calculateTotal;
+    async function generatePDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    
+    // Pobieramy dane z Twojej strony
+    const suma = document.getElementById('totalPrice').innerText;
+    const usługi = document.getElementById('offerSummary').innerText;
+    const data = new Date().toLocaleDateString();
+
+    // --- STYLIZACJA CERTYFIKATU ---
+    // Nagłówek
+    doc.setFontSize(22);
+    doc.setTextColor(40, 44, 52);
+    doc.text("CERTYFIKAT REALIZACJI MISJI", 105, 40, { align: "center" });
+
+    // Linia ozdobna
+    doc.setLineWidth(0.5);
+    doc.line(20, 45, 190, 45);
+
+    // Treść
+    doc.setFontSize(14);
+    doc.text("Niniejszym potwierdza się wykonanie operacji lotniczej przez:", 20, 60);
+    
+    doc.setFontSize(16);
+    doc.setFont(undefined, 'bold');
+    doc.text("Jacek Kosek - Drone Media & IT", 20, 70);
+
+    doc.setFont(undefined, 'normal');
+    doc.setFontSize(12);
+    doc.text(`Data wykonania: ${data}`, 20, 85);
+    doc.text(`Zakres prac: ${usługi}`, 20, 95, { maxWidth: 170 });
+    
+    doc.setFontSize(14);
+    doc.text(`Wartość zlecenia: ${suma} PLN`, 20, 120);
+
+    // Stopka profesjonalna
+    doc.setFontSize(10);
+    doc.setTextColor(150);
+    doc.text("Dokument wygenerowany automatycznie przez system JacekOS v1.0", 105, 280, { align: "center" });
+
+    // Pobieranie pliku
+    doc.save(`Certyfikat_DroneMedia_${data}.pdf`);
+}
 </script>
 </body>
 </html>
