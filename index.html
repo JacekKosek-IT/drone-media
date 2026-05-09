@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacek Kosek - Profesjonalne Usługi Dronem 2.7K</title>
+    <style>
+        :root {
+            --primary: #00d4ff;
+            --accent: #fdbb2d;
+            --bg: #05070a;
+            --card-bg: rgba(28, 34, 45, 0.6);
+        }
+
+        body {
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: var(--bg);
+            color: white;
+            line-height: 1.8;
+            background-image: radial-gradient(circle at 50% -20%, #1a2a6c, transparent);
+        }
+
+        header {
+            padding: 120px 20px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        h1 { 
+            margin: 0; 
+            font-size: clamp(2.5em, 8vw, 4.5em); 
+            background: linear-gradient(to right, #fff, var(--primary), #fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -3px;
+            font-weight: 900;
+        }
+
+        h2 { color: var(--primary); font-size: 2em; margin-top: 50px; border-left: 4px solid var(--accent); padding-left: 15px; }
+        p { color: #ccc; font-size: 1.1em; }
+        .highlight { color: var(--primary); font-weight: bold; }
+
+        /* Sekcje z dużą ilością tekstu */
+        .info-section {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 30px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 30px;
+            border-radius: 20px;
+            border-bottom: 3px solid var(--primary);
+        }
+
+        /* Tabela */
+        .table-container {
+            overflow-x: auto;
+            margin-top: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        th, td { padding: 25px; text-align: left; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        th { background: rgba(0, 212, 255, 0.1); color: var(--primary); text-transform: uppercase; font-size: 0.9em; }
+        .price { color: var(--accent); font-weight: 800; font-size: 1.5em; }
+
+        /* Formularz */
+        .contact-section {
+            background: linear-gradient(145deg, #1c222d, #05070a);
+            padding: 60px;
+            border-radius: 40px;
+            margin-top: 80px;
+            border: 1px solid var(--primary);
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 20px;
+            margin-top: 10px;
+            margin-bottom: 25px;
+            background: #000;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            border-radius: 15px;
+            font-size: 1em;
+        }
+
+        button {
+            background: var(--primary);
+            color: #000;
+            padding: 22px;
+            border: none;
+            border-radius: 15px;
+            font-weight: 900;
+            cursor: pointer;
+            width: 100%;
+            text-transform: uppercase;
+            font-size: 1.2em;
+            transition: 0.4s;
+        }
+
+        button:hover { background: var(--accent); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(253, 187, 45, 0.3); }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #fff;
+            text-decoration: none;
+            padding: 20px 40px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+            font-weight: bold;
+        }
+
+        .contact-links a:hover { background: white; color: black; }
+
+        footer { text-align: center; padding: 100px; opacity: 0.4; border-top: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>JACEK KOSEK DRONE MEDIA</h1>
+    <p>Nowoczesna fotografia i wideofilmowanie z powietrza w rozdzielczości <span class="highlight">2.7K Quad HD</span></p>
+</header>
+
+<div class="container">
+    
+    <section class="info-section">
+        <h2>Technologia i Precyzja: DJI Mini SE</h2>
+        <p>W moich realizacjach stawiam na sprawdzony sprzęt światowego lidera – drona <span class="highlight">DJI Mini SE</span>. Urządzenie to, mimo swoich kompaktowych rozmiarów, oferuje potężne możliwości rejestracji obrazu. Wyposażone w 3-osiowy gimbal mechaniczny, gwarantuje idealnie płynne nagrania nawet podczas dynamicznych przelotów czy silniejszego wiatru.</p>
+        <p>Kluczowe parametry techniczne mojego setupu:</p>
+        <ul>
+            <li>Rozdzielczość wideo: <span class="highlight">2720x1530 (2.7K)</span> przy 30 klatkach na sekundę.</li>
+            <li>Matryca CMOS 12 MP zapewniająca żywe kolory i wysoką szczegółowość zdjęć.</li>
+            <li>Zasięg operacyjny pozwalający na swobodne filmowanie rozległych działek i obiektów architektonicznych.</li>
+            <li>Inteligentne tryby lotu (QuickShots), które umożliwiają wykonanie kinowych ujęć typu Dronie, Rocket czy Helix.</li>
+        </ul>
+    </section>
+
+    <div class="grid-3">
+        <div class="feature-card">
+            <h3>Nieruchomości</h3>
+            <p>Profesjonalna dokumentacja wizualna domów, działek budowlanych oraz terenów inwestycyjnych. Zdjęcia z powietrza pozwalają potencjalnemu kupcowi zobaczyć pełną perspektywę okolicy, sąsiedztwo oraz dokładny kształt działki, co znacząco przyspiesza proces sprzedaży.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Wydarzenia i Eventy</h3>
+            <p>Uwieczniam najważniejsze momenty z nowej perspektywy. Niezależnie od tego, czy jest to lokalny mecz, uroczystość rodzinna w ogrodzie, czy relacja z postępów prac na budowie – jakość 2.7K zapewnia obraz czysty i pełen detali.</p>
+        </div>
+        <div class="feature-card">
+            <h3>Postprodukcja IT</h3>
+            <p>Nie oddaję tylko surowych plików. Moja wiedza z zakresu IT pozwala mi na sprawny montaż materiałów, dodanie odpowiedniego podkładu muzycznego oraz korekcję kolorystyczną, dzięki czemu gotowy film jest od razu gotowy do publikacji na platformach takich jak YouTube czy Instagram.</p>
+        </div>
+    </div>
+
+    <section class="info-section" style="margin-top: 60px;">
+        <h2>Bezpieczeństwo i Profesjonalizm</h2>
+        <p>Każdy lot poprzedzony jest dokładną analizą warunków meteorologicznych oraz sprawdzeniem stref lotniczych w dedykowanych aplikacjach. Bezpieczeństwo osób postronnych oraz mienia jest dla mnie priorytetem. Przed startem wykonuję pełną listę kontrolną sprzętu (Battery check, GPS signal lock, Compass calibration), aby mieć pewność, że misja przebiegnie bez zakłóceń.</p>
+    </section>
+
+    <h2>Szczegółowa Oferta i Inwestycja</h2>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Pakiet</th>
+                    <th>Zakres prac i dostarczone materiały</th>
+                    <th>Inwestycja</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Basic Photo</strong></td>
+                    <td>10 wyselekcjonowanych zdjęć JPG w wysokiej rozdzielczości, przekazanych drogą elektroniczną.</td>
+                    <td class="price">15 PLN</td>
+                </tr>
+                <tr>
+                    <td><strong>Full Video 2.7K</strong></td>
+                    <td>20 minut czystego czasu lotu. Dostarczam surowe pliki MP4 w jakości 2.7K Quad HD.</td>
+                    <td class="price">45 PLN</td>
+                </tr>
+                <tr>
+                    <td><strong>Social Media Pro</strong></td>
+                    <td>Montaż dynamicznego filmu (30-60 sekund) z muzyką, napisami i efektami przejść.</td>
+                    <td class="price">60 PLN</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="contact-section">
+        <h2>Skontaktuj się ze mną</h2>
+        <p>Jeśli potrzebujesz profesjonalnych ujęć z powietrza lub masz nietypowe zlecenie – opisz je w formularzu poniżej. Odpiszę najszybciej jak to możliwe.</p>
+        <form action="https://formspree.io/f/maqvprvb" method="POST">
+            <input type="email" name="email" placeholder="Twój adres e-mail (do kontaktu)" required>
+            <textarea name="message" rows="6" placeholder="Opisz swoje zlecenie: lokalizacja, preferowany termin oraz rodzaj ujęć..." required></textarea>
+            <button type="submit">Wyślij Formularz Zlecenia</button>
+        </form>
+    </div>
+
+    <div class="contact-links">
+        <a href="tel:+48696229644">📞 Zadzwon: +48 696 229 644</a>
+        <a href="mailto:abublik854@gmail.com">✉️ abublik854@gmail.com</a>
+    </div>
+
+    <footer>
+        &copy; 2026 Jacek Kosek - Drone Media & IT Solutions. Strona stworzona samodzielnie i hostowana na GitHub Pages.
+    </footer>
+
+</div>
+
+</body>
+</html>
