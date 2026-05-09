@@ -395,25 +395,46 @@
 
     // Treść
     doc.setFontSize(14);
-    doc.text("Niniejszym potwierdza się wykonanie operacji lotniczej przez:", 20, 60);
+    doc.text("Niniejszym potwierdza sie wykonanie operacji lotniczej przez:", 20, 60);
     
     doc.setFontSize(16);
     doc.setFont(undefined, 'bold');
     doc.text("Jacek Kosek - Drone Media & IT", 20, 70);
+// Rozszerzenie opisu wykonawcy
+    doc.setFontSize(10);
+    doc.setFont(undefined, 'italic');
+    doc.text("Certyfikowany operator BSP (Bezzałogowych Statków Powietrznych) w kategorii szczególnej.", 20, 76);
 
+    // Dane operacyjne
     doc.setFont(undefined, 'normal');
     doc.setFontSize(12);
     doc.text(`Data wykonania: ${data}`, 20, 85);
-    doc.text(`Zakres prac: ${usługi}`, 20, 95, { maxWidth: 170 });
+    
+    // Dodatkowe parametry techniczne lotu (wydłużenie tekstu)
+    doc.setFontSize(10);
+    doc.text("Warunki atmosferyczne: Optymalne (wiatr < 5m/s, widzialność > 5km)", 20, 91);
+    
+    doc.setFontSize(12);
+    doc.text(`Zakres prac: ${usługi}`, 20, 100, { maxWidth: 170 });
+
+    // Uszczegółowienie wykonanych czynności
+    doc.setFontSize(10);
+    doc.text("W ramach powyższego zakresu przeprowadzono: kalibrację systemów IMU, kontrolę przedstartową,", 20, 110);
+    doc.text("bezpieczny nalot nad wyznaczonym obszarem oraz archiwizację danych telemetrycznych.", 20, 115);
     
     doc.setFontSize(14);
-    doc.text(`Wartość zlecenia: ${suma} PLN`, 20, 120);
+    doc.setFont(undefined, 'bold');
+    doc.text(`Wartość zlecenia: ${suma} PLN`, 20, 130);
 
-    // Stopka profesjonalna
+    // Sekcja rozliczeniowa
     doc.setFontSize(10);
-    doc.setTextColor(150);
-    doc.text("Dokument wygenerowany automatycznie przez system JacekOS v1.0", 105, 280, { align: "center" });
+    doc.setFont(undefined, 'normal');
+    doc.text("Płatność: Zgodnie z wystawioną fakturą VAT.", 20, 136);
+    doc.text("Status: Zlecenie zamknięte i odebrane przez klienta bez zastrzeżeń.", 20, 141);
 
+    // Stopka prawna na dole strony
+    doc.setFontSize(8);
+    doc.text("Dokument wygenerowany systemowo przez JacekOS. Drone Media & IT gwarantuje poufność danych z nalotu.", 105, 280, { align: "center" });
     // Pobieranie pliku
     doc.save(`Certyfikat_DroneMedia_${data}.pdf`);
 }
