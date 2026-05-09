@@ -299,10 +299,7 @@
         </label>
     </div>
 
-    <div style="margin-top: 30px; padding: 20px; background: rgba(0,0,0,0.4); border-radius: 15px; text-align: center;">
-        <span style="font-size: 1.5em;">Razem do zapłaty: </span>
-        <span id="totalPrice" style="font-size: 2.5em; color: var(--accent); font-weight: 900;">0</span>
-        <span style="font-size: 1.5em; color: var(--accent);"> PLN</span>
+
     </div>
 </section>
         </table>
@@ -335,16 +332,37 @@
 <script>
     function calculateTotal() {
         let total = 0;
+        let selectedNames = [];
+        
+        // Szukamy wszystkich zaznaczonych checkboxów
         const checkboxes = document.querySelectorAll('.price-check');
         
         checkboxes.forEach((checkbox) => {
             if (checkbox.checked) {
+                // Dodajemy cenę (zamieniamy tekst na liczbę)
                 total += parseInt(checkbox.value);
+                
+                // Pobieramy nazwę usługi z atrybutu data-name
+                selectedNames.push(checkbox.getAttribute('data-name'));
             }
         });
         
+        // Wyświetlamy sumę w dużym polu
         document.getElementById('totalPrice').innerText = total;
+        
+        // Aktualizujemy listę wybranych usług pod ceną
+        const summaryElement = document.getElementById('offerSummary');
+        if (selectedNames.length > 0) {
+            summaryElement.innerText = "Wybrane: " + selectedNames.join(", ");
+            summaryElement.style.color = "#00d4ff"; // Zmieniamy kolor na jasnoniebieski, gdy coś jest wybrane
+        } else {
+            summaryElement.innerText = "Wybierz coś z listy, aby zobaczyć wycenę...";
+            summaryElement.style.color = "#888"; // Szary kolor, gdy nic nie jest wybrane
+        }
     }
+
+    // Wywołujemy funkcję raz na starcie, żeby wyzerować kalkulator po odświeżeniu
+    window.onload = calculateTotal;
 </script>
 </body>
 </html>
