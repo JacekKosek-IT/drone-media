@@ -228,39 +228,74 @@
     
     <div style="display: flex; flex-direction: column; gap: 15px;">
         <label style="font-size: 1.2em; cursor: pointer;">
-            <input type="checkbox" class="price-check" value="15" onchange="calculateTotal()"> 📸 Sesja Photo (15 PLN)
-        </label>
-        <label style="font-size: 1.2em; cursor: pointer;">
-            <input type="checkbox" class="price-check" value="45" onchange="calculateTotal()"> 🛸 Sesja Wideo 2.7K (45 PLN)
-        </label>
-        <label style="font-size: 1.2em; cursor: pointer;">
-            <input type="checkbox" class="price-check" value="60" onchange="calculateTotal()"> 🎬 Full Social Pro - Montaż (60 PLN)
-            <!-- USŁUGI BIZNESOWE -->
-        <div class="feature-card">
-            <h3>💼 Biznes & Reklama</h3>
-            <label><input type="checkbox" class="price-check" value="20" data-name="Wizytówka Google Maps" onchange="calculateTotal()"> Wizytówka Google Maps - 20 PLN</label><br>
-            <label><input type="checkbox" class="price-check" value="50" data-name="Reklama dla restauracji" onchange="calculateTotal()"> Reklama dla restauracji - 50 PLN</label><br>
-            <label><input type="checkbox" class="price-check" value="30" data-name="Prezent 'Z lotu ptaka'" onchange="calculateTotal()"> Prezent 'Z lotu ptaka' - 30 PLN</label>
+       <!-- PAKIETY PODSTAWOWE -->
+        <div class="feature-card" style="border-bottom-color: #ff0055;">
+            <h3>📦 Pakiety Baza</h3>
+            <label>
+                <input type="checkbox" class="price-check" value="15" data-name="Sesja Photo (10 szt.)" onchange="calculateTotal()"> 
+                <strong>Sesja Photo (10 szt.) - 15 PLN</strong><br>
+                <small>Zestaw 10 profesjonalnych ujęć Twojego domu lub działki.</small>
+            </label><br><br>
+            <label>
+                <input type="checkbox" class="price-check" value="30" data-name="Surowy Film (20 min)" onchange="calculateTotal()"> 
+                <strong>Surowy Film (20 min) - 30 PLN</strong><br>
+                <small>Pełne nagranie z lotu bez montażu – idealne do własnej obróbki.</small>
+            </label><br><br>
+            <label>
+                <input type="checkbox" class="price-check" value="60" data-name="Pełny Montaż + Film" onchange="calculateTotal()"> 
+                <strong>Pełny Montaż + Film - 60 PLN</strong><br>
+                <small>Gotowy, dynamiczny film z podkładem muzycznym i efektami.</small>
+            </label>
         </div>
 
         <!-- EFEKTY FILMOWE -->
         <div class="feature-card" style="border-bottom-color: #fdbb2d;">
-            <h3>🎬 Efekty Filmowe</h3>
-            <label><input type="checkbox" class="price-check" value="15" data-name="Filmowy Odjazd" onchange="calculateTotal()"> Filmowy Odjazd - 15 PLN</label><br>
-            <label><input type="checkbox" class="price-check" value="25" data-name="Satelita" onchange="calculateTotal()"> Satelita - 25 PLN</label><br>
-            <label><input type="checkbox" class="price-check" value="15" data-name="Wznosząca Rakieta" onchange="calculateTotal()"> Wznosząca Rakieta - 15 PLN</label><br>
-            <label><input type="checkbox" class="price-check" value="30" data-name="Kosmiczna Spirala" onchange="calculateTotal()"> Kosmiczna Spirala - 30 PLN</label>
+            <h3>🎬 Efekty Specjalne</h3>
+            <label>
+                <input type="checkbox" class="price-check" value="15" data-name="Filmowy Odjazd" onchange="calculateTotal()"> 
+                <strong>Filmowy Odjazd - 15 PLN</strong><br>
+                <small>Dron startuje tuż przed Tobą i płynnie odlatuje, pokazując ogrom okolicy.</small>
+            </label><br><br>
+            <label>
+                <input type="checkbox" class="price-check" value="25" data-name="Satelita" onchange="calculateTotal()"> 
+                <strong>Satelita - 25 PLN</strong><br>
+                <small>Dron wykonuje idealne, równe koło wokół Ciebie lub Twojego domu.</small>
+            </label><br><br>
+            <label>
+                <input type="checkbox" class="price-check" value="30" data-name="Kosmiczna Spirala" onchange="calculateTotal()"> 
+                <strong>Kosmiczna Spirala - 30 PLN</strong><br>
+                <small>Najbardziej widowiskowy lot – dron krąży i jednocześnie wznosi się do nieba.</small>
+            </label>
         </div>
 
-        <!-- AKCJA I DODATKI -->
+        <!-- BIZNES I AKCJA -->
         <div class="feature-card" style="border-bottom-color: #00ff88;">
-            <h3>⚡ Akcja & Czas</h3>
-            <label><input type="checkbox" class="price-check" value="50" data-name="Wydarzenie sportowe" onchange="calculateTotal()"> Wydarzenie sportowe - 50 PLN</label><br>
-            <label><input type="checkbox" class="price-check" value="40" data-name="Sesja o zachodzie słońca" onchange="calculateTotal()"> Sesja o zachodzie słońca - 40 PLN</label><br>
-            <label><input type="checkbox" class="price-check" value="45" data-name="Dynamiczne śledzenie" onchange="calculateTotal()"> Dynamiczne śledzenie - 45 PLN</label><br>
-            <hr style="margin: 10px 0; border: 0.5px solid #444;">
-            <label style="color: #00d4ff; font-weight: bold;"><input type="checkbox" class="price-check" value="20" data-name="Szybka realizacja (Express)" onchange="calculateTotal()"> + EXPRESS (w 2h) - 20 PLN</label>
+            <h3>🚀 Biznes & Akcja</h3>
+            <label>
+                <input type="checkbox" class="price-check" value="20" data-name="Wizytówka Google" onchange="calculateTotal()"> 
+                <strong>Wizytówka Google - 20 PLN</strong><br>
+                <small>Zdjęcie, które wyróżni Twoją firmę na mapach i przyciągnie klientów.</small>
+            </label><br><br>
+            <label>
+                <input type="checkbox" class="price-check" value="45" data-name="Dynamiczne śledzenie" onchange="calculateTotal()"> 
+                <strong>Dynamiczne śledzenie - 45 PLN</strong><br>
+                <small>Podążanie dronem za jadącym autem lub rowerzystą (ujęcia akcji).</small>
+            </label><br><br>
+            <label style="color: #00d4ff; font-weight: bold;">
+                <input type="checkbox" class="price-check" value="20" data-name="Szybka realizacja" onchange="calculateTotal()"> 
+                <strong>+ EXPRESS (2h) - 20 PLN</strong><br>
+                <small>Otrzymasz gotowe pliki prosto na telefon w zaledwie 2 godziny.</small>
+            </label>
         </div>
+    </div>
+
+    <!-- SUMATOR -->
+    <div id="summary-box" style="margin-top: 40px; padding: 30px; background: linear-gradient(145deg, #1c222d, #05070a); border-radius: 20px; border: 2px solid var(--primary); text-align: center;">
+        <h3 style="margin: 0 0 10px 0;">Razem do zapłaty:</h3>
+        <span id="totalPrice" style="font-size: 3.5em; color: var(--accent); font-weight: 900;">0</span>
+        <span style="font-size: 1.5em; color: var(--accent);"> PLN</span>
+        <p id="offerSummary" style="color: #888; font-style: italic; margin-top: 15px;">Wybierz coś z listy, aby zobaczyć wycenę...</p>
+    </div>
         </label>
     </div>
 
